@@ -149,11 +149,30 @@ const normalizeRestaurant = (restaurant) => {
 
 const getStaticRestaurants = (dishType) => {
   const cards = swiggyData?.data?.cards || [];
-  const section = cards[2]?.card?.card || cards[3]?.card?.card;
-  const list =
-    section?.gridElements?.infoWithStyle?.restaurants ||
-    section?.restaurants ||
-    [];
+  const list = [];
+
+  cards.forEach((rootCard) => {
+    const card = rootCard?.card?.card;
+
+    const directRestaurants =
+      card?.gridElements?.infoWithStyle?.restaurants || card?.restaurants;
+    if (Array.isArray(directRestaurants) && directRestaurants.length > 0) {
+      list.push(...directRestaurants);
+    }
+
+    const groupedRestaurantCards =
+      rootCard?.groupedCard?.cardGroupMap?.RESTAURANT?.cards || [];
+
+    groupedRestaurantCards.forEach((groupCard) => {
+      const groupedRestaurants =
+        groupCard?.card?.card?.restaurants ||
+        groupCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+      if (Array.isArray(groupedRestaurants) && groupedRestaurants.length > 0) {
+        list.push(...groupedRestaurants);
+      }
+    });
+  });
 
   const normalized = list.map(normalizeRestaurant);
   const uniqueRestaurants = normalized.filter(
