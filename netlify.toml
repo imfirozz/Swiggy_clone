@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --prefix src && npm run build"
+  command = "npm install --prefix src --include=dev && npm run build"
   publish = "src/dist"
 
 [[redirects]]
