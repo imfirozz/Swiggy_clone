@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import swiggyData from "../../data/swiggyData.json";
 
 export default function Restro_Header() {
+  const navigate = useNavigate();
   const headerData = swiggyData?.data?.cards[0]?.card?.card;
   const headerTitle = "What's on your mind?";
   const imageGridInfo = headerData?.imageGridCards?.info || [];
@@ -19,28 +21,21 @@ export default function Restro_Header() {
 
       const url = new URL(baseUrl);
       const pathMatch = url.pathname.match(/\/collections\/([^\/]+)/);
-      const collectionId = pathMatch?.[1];
+      const collectionId =
+        pathMatch?.[1] || url.searchParams.get("collection_id");
 
       if (!collectionId) return;
 
-      const swiggyParams = new URLSearchParams(url.search);
+      const searchContext = url.searchParams.get("search_context") || "";
+      const dishType = (searchContext || title || "")
+        .toLowerCase()
+        .replace(/\s+/g, "");
+
       const params = new URLSearchParams();
+      params.set("title", title || "");
+      params.set("dish", dishType);
 
-      params.append("collection", collectionId);
-
-      if (title) {
-        params.append("title", title);
-      }
-
-      const allowedParams = ["tags", "type", "search_context"];
-      for (const [key, value] of swiggyParams) {
-        if (allowedParams.includes(key)) {
-          params.append(key, value);
-        }
-      }
-
-      const finalUrl = `/collections/${collectionId}?${params.toString()}`;
-      window.location.href = finalUrl;
+      navigate(`/collections/${collectionId}?${params.toString()}`);
     } catch (error) {
       console.error("URL parse error:", error);
     }
@@ -71,7 +66,9 @@ export default function Restro_Header() {
               </div>
 
               <div className="mt-3 text-center w-[120px] sm:w-[132px] lg:w-[144px]">
-                <span className="font-semibold text-gray-800"></span>
+                <span className="font-semibold text-gray-800">
+                  {item.action?.text}
+                </span>
               </div>
             </div>
           ))}
