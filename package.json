@@ -1,0 +1,10 @@
+{
+  "name": "swiggy-clone-workspace",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix src",
+    "dev": "npm run dev --prefix src",
+    "build": "npm install --prefix src && npm run clean --prefix src && npm run build --prefix src",
+    "clean": "npm run clean --prefix src"
+  }
+}

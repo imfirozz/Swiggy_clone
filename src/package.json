@@ -1,0 +1,25 @@
+{
+  "name": "swiggy-clone",
+  "private": true,
+  "scripts": {
+    "dev": "parcel index.html --port 1234 --cache-dir .parcel-cache",
+    "build": "parcel build index.html --dist-dir dist --public-url ./ --no-cache",
+    "clean": "rm -rf .parcel-cache dist"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.24",
+    "parcel": "^2.16.3",
+    "postcss": "^8.5.6",
+    "process": "^0.11.10",
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.12.0",
+    "react-router-dom": "^7.12.0"
+  }
+}

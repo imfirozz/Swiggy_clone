@@ -1,0 +1,8 @@
+[build]
+  command = "npm install --prefix src && npm run build"
+  publish = "src/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,1016 @@
+{
+"statusCode": 0,
+"data": {
+"statusMessage": "done successfully",
+"cards": [
+{
+"card": {
+"card": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.RecentSearches",
+"id": "recentSearchesWidget",
+"title": "Recent Searches",
+"minItemsToDisplay": 3,
+"maxItemsToDisplay": 5
+}
+}
+},
+{
+"card": {
+"card": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+"header": {},
+"layout": {
+"rows": 1,
+"columns": 1,
+"widgetPadding": {
+"top": 8
+},
+"containerStyle": {
+"containerPadding": {
+"left": 16,
+"top": 24,
+"right": 16,
+"bottom": 16
+}
+}
+},
+"imageGridCards": {
+"info": [
+{
+"id": "559007",
+"imageId": "rng/md/carousel/production/eq4y45x0uk2ha5nighpv",
+"action": {
+"link": "swiggy://stores/instamart?entryId=559007&entryName=swiggyPresearchWidget",
+"text": "Header",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://stores/instamart?entryId=559007&entryName=swiggyPresearchWidget",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 1,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 0.08536585,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+},
+"id": "Searchpage_InstamartHeader_V1",
+"gridElements": {
+"infoWithStyle": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.ImageInfoLayoutCard",
+"info": [
+{
+"id": "559007",
+"imageId": "rng/md/carousel/production/eq4y45x0uk2ha5nighpv",
+"action": {
+"link": "swiggy://stores/instamart?entryId=559007&entryName=swiggyPresearchWidget",
+"text": "Header",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://stores/instamart?entryId=559007&entryName=swiggyPresearchWidget",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 1,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 0.08536585,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+}
+}
+}
+}
+},
+{
+"card": {
+"card": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+"header": {
+"headerStyling": {
+"padding": {
+"left": 16,
+"top": 28
+}
+}
+},
+"layout": {
+"rows": 1,
+"columns": 6,
+"horizontalScrollEnabled": true,
+"itemSpacing": 10,
+"widgetPadding": {},
+"containerStyle": {
+"containerPadding": {
+"left": 16,
+"top": 12,
+"right": 16,
+"bottom": 12
+}
+}
+},
+"imageGridCards": {
+"info": [
+{
+"id": "826990",
+"imageId": "rng/md/carousel/production/145c7ff03fc5af2c347a146e5d05e974",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Biscuits&entryId=826990&entryName=swiggypresearchchiclet7",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "biscuits",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Biscuits&entryId=826990&entryName=swiggypresearchchiclet7",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826993",
+"imageId": "rng/md/carousel/production/9281662f2652ecbd7a6b227c004d7173",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Popcorn&entryId=826993&entryName=swiggypresearchchiclet8",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "popcorn",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Popcorn&entryId=826993&entryName=swiggypresearchchiclet8",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826991",
+"imageId": "rng/md/carousel/production/ca1203fdc571025785b7cf7289d7dc3a",
+"action": {
+"link": "swiggy://stores/instamart/category-listing?categoryName=Sauces+and+Spreads&custom_back=true&taxonomyType=All+Listing&entryId=1234&entryName=swiggypresearchchiclet9",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Sauces and spread",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/category-listing?categoryName=Sauces+and+Spreads&custom_back=true&taxonomyType=All+Listing&entryId=1234&entryName=swiggypresearchchiclet9",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826996",
+"imageId": "rng/md/carousel/production/1b21c87fb3dabe5bf22f46c3d273388b",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Coffee&entryId=826996&entryName=swiggypresearchchiclet9",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Coffee",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Coffee&entryId=826996&entryName=swiggypresearchchiclet9",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826994",
+"imageId": "rng/md/carousel/production/931e3975c691e98ee2e7e40f1cc9e9e9",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Cheese&entryId=826994&entryName=swiggypresearchchiclet11",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Cheese",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Cheese&entryId=826994&entryName=swiggypresearchchiclet11",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826987",
+"imageId": "rng/md/carousel/production/3672f7edb4bc890e83aed39b4b550c37",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Repellents&entryId=826987&entryName=swiggypresearchchiclet12",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Repellents",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Repellents&entryId=826987&entryName=swiggypresearchchiclet12",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 0.23529412,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 1.4210526,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+},
+"id": "PopularCategoriessearchpage",
+"gridElements": {
+"infoWithStyle": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.ImageInfoLayoutCard",
+"info": [
+{
+"id": "826990",
+"imageId": "rng/md/carousel/production/145c7ff03fc5af2c347a146e5d05e974",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Biscuits&entryId=826990&entryName=swiggypresearchchiclet7",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "biscuits",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Biscuits&entryId=826990&entryName=swiggypresearchchiclet7",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826993",
+"imageId": "rng/md/carousel/production/9281662f2652ecbd7a6b227c004d7173",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Popcorn&entryId=826993&entryName=swiggypresearchchiclet8",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "popcorn",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Popcorn&entryId=826993&entryName=swiggypresearchchiclet8",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826991",
+"imageId": "rng/md/carousel/production/ca1203fdc571025785b7cf7289d7dc3a",
+"action": {
+"link": "swiggy://stores/instamart/category-listing?categoryName=Sauces+and+Spreads&custom_back=true&taxonomyType=All+Listing&entryId=1234&entryName=swiggypresearchchiclet9",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Sauces and spread",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/category-listing?categoryName=Sauces+and+Spreads&custom_back=true&taxonomyType=All+Listing&entryId=1234&entryName=swiggypresearchchiclet9",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826996",
+"imageId": "rng/md/carousel/production/1b21c87fb3dabe5bf22f46c3d273388b",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Coffee&entryId=826996&entryName=swiggypresearchchiclet9",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Coffee",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Coffee&entryId=826996&entryName=swiggypresearchchiclet9",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826994",
+"imageId": "rng/md/carousel/production/931e3975c691e98ee2e7e40f1cc9e9e9",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Cheese&entryId=826994&entryName=swiggypresearchchiclet11",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Cheese",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Cheese&entryId=826994&entryName=swiggypresearchchiclet11",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "826987",
+"imageId": "rng/md/carousel/production/3672f7edb4bc890e83aed39b4b550c37",
+"action": {
+"link": "swiggy://stores/instamart/search?custom_back=true&query=Repellents&entryId=826987&entryName=swiggypresearchchiclet12",
+"text": "Popular Categories",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {
+"altText": "Repellents",
+"altTextCta": "open"
+},
+"entityId": "swiggy://stores/instamart/search?custom_back=true&query=Repellents&entryId=826987&entryName=swiggypresearchchiclet12",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 0.23529412,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 1.4210526,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+}
+}
+}
+}
+},
+{
+"card": {
+"card": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+"header": {
+"title": "Popular Cuisines",
+"headerStyling": {
+"padding": {
+"left": 16,
+"top": 28
+}
+}
+},
+"layout": {
+"rows": 1,
+"columns": 12,
+"horizontalScrollEnabled": true,
+"itemSpacing": 10,
+"widgetPadding": {
+"top": 8,
+"bottom": 8
+},
+"containerStyle": {
+"containerPadding": {
+"left": 16,
+"top": 12,
+"right": 16,
+"bottom": 24
+}
+}
+},
+"imageGridCards": {
+"info": [
+{
+"id": "600995",
+"imageId": "rng/md/carousel/production/3df4fca020027e89b89c733cdffc4966",
+"action": {
+"link": "swiggy://explore?query=Rolls",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Rolls",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600813",
+"imageId": "rng/md/carousel/production/5dd234f7decdac4b4f71a2ff1408e10f",
+"action": {
+"link": "swiggy://explore?query=Pizza",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Pizza",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600833",
+"imageId": "rng/md/carousel/production/e76b511935016406e6ebc11dd7593387",
+"action": {
+"link": "swiggy://explore?query=Burgers",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Burgers",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "601016",
+"imageId": "rng/md/carousel/production/87664acb0f9dd95d10a549bb8190ab27",
+"action": {
+"link": "swiggy://explore?query=Tea",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Tea",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600854",
+"imageId": "rng/md/carousel/production/89f3fec702aef5acbb51a6cbc284b3f7",
+"action": {
+"link": "swiggy://explore?query=Chinese",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Chinese",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600868",
+"imageId": "rng/md/carousel/production/8322f6d6df488dc1f5a6674cfe863f0f",
+"action": {
+"link": "swiggy://explore?query=Cake",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Cake",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600884",
+"imageId": "rng/md/carousel/production/31f03222ea978aef3b10d386729eb076",
+"action": {
+"link": "swiggy://explore?query=Desserts",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Desserts",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600828",
+"imageId": "rng/md/carousel/production/c170aa4262ec0d191642f42a3a03b4ce",
+"action": {
+"link": "swiggy://explore?query=North%20Indian",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=North%20Indian",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600901",
+"imageId": "rng/md/carousel/production/0b5ffa32a04d99c1f212d2aacefd5f6f",
+"action": {
+"link": "swiggy://explore?query=South%20Indian",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=South%20Indian",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600916",
+"imageId": "rng/md/carousel/production/36184033ebef97d27a85fa3af5c1d403",
+"action": {
+"link": "swiggy://explore?query=Sandwich",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Sandwich",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600932",
+"imageId": "rng/md/carousel/production/d0884e09ef431ee610e54a0bb2dfecd5",
+"action": {
+"link": "swiggy://explore?query=Ice%20cream",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Ice%20cream",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "601037",
+"imageId": "rng/md/carousel/production/8a78ff126fb0b02fb6813408022d7d54",
+"action": {
+"link": "swiggy://explore?query=Indian%20Snacks",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Indian%20Snacks",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 0.23529412,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 1.4210526,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+},
+"id": "PopularCuisinessearchpage",
+"gridElements": {
+"infoWithStyle": {
+"@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.ImageInfoLayoutCard",
+"info": [
+{
+"id": "600995",
+"imageId": "rng/md/carousel/production/3df4fca020027e89b89c733cdffc4966",
+"action": {
+"link": "swiggy://explore?query=Rolls",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Rolls",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600813",
+"imageId": "rng/md/carousel/production/5dd234f7decdac4b4f71a2ff1408e10f",
+"action": {
+"link": "swiggy://explore?query=Pizza",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Pizza",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600833",
+"imageId": "rng/md/carousel/production/e76b511935016406e6ebc11dd7593387",
+"action": {
+"link": "swiggy://explore?query=Burgers",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Burgers",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "601016",
+"imageId": "rng/md/carousel/production/87664acb0f9dd95d10a549bb8190ab27",
+"action": {
+"link": "swiggy://explore?query=Tea",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Tea",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600854",
+"imageId": "rng/md/carousel/production/89f3fec702aef5acbb51a6cbc284b3f7",
+"action": {
+"link": "swiggy://explore?query=Chinese",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Chinese",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600868",
+"imageId": "rng/md/carousel/production/8322f6d6df488dc1f5a6674cfe863f0f",
+"action": {
+"link": "swiggy://explore?query=Cake",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Cake",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600884",
+"imageId": "rng/md/carousel/production/31f03222ea978aef3b10d386729eb076",
+"action": {
+"link": "swiggy://explore?query=Desserts",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Desserts",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600828",
+"imageId": "rng/md/carousel/production/c170aa4262ec0d191642f42a3a03b4ce",
+"action": {
+"link": "swiggy://explore?query=North%20Indian",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=North%20Indian",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600901",
+"imageId": "rng/md/carousel/production/0b5ffa32a04d99c1f212d2aacefd5f6f",
+"action": {
+"link": "swiggy://explore?query=South%20Indian",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=South%20Indian",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600916",
+"imageId": "rng/md/carousel/production/36184033ebef97d27a85fa3af5c1d403",
+"action": {
+"link": "swiggy://explore?query=Sandwich",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Sandwich",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "600932",
+"imageId": "rng/md/carousel/production/d0884e09ef431ee610e54a0bb2dfecd5",
+"action": {
+"link": "swiggy://explore?query=Ice%20cream",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Ice%20cream",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+},
+{
+"id": "601037",
+"imageId": "rng/md/carousel/production/8a78ff126fb0b02fb6813408022d7d54",
+"action": {
+"link": "swiggy://explore?query=Indian%20Snacks",
+"text": "Popular Cuisines",
+"type": "DEEPLINK"
+},
+"entityType": "BANNER",
+"accessibility": {},
+"entityId": "swiggy://explore?query=Indian%20Snacks",
+"frequencyCapping": {},
+"externalMarketing": {},
+"overlayIcon": {},
+"footerOverlay": {
+"title": {},
+"subtitle": {},
+"cta": {}
+}
+}
+],
+"style": {
+"width": {
+"type": "TYPE_RELATIVE",
+"value": 0.23529412,
+"reference": "RELATIVE_DIMENSION_REFERENCE_CONTAINER_WIDTH"
+},
+"height": {
+"type": "TYPE_RELATIVE",
+"value": 1.4210526,
+"reference": "RELATIVE_DIMENSION_REFERENCE_WIDTH"
+}
+}
+}
+}
+}
+}
+}
+],
+"firstOffsetRequest": true,
+"nextFetch": 3
+},
+"tid": "88cc8a44-ea1a-4fb8-9a9f-20e77fc757a1",
+"sid": "p8076aa7-9a74-4a7b-8aee-c272a395eb2b",
+"deviceId": "663cd9c7-0449-024f-940c-b517fba567ac",
+"csrfToken": "2U4PYII4iuKZ-3nGrm9eKVL6TgvInv5Sc0t_ftgI"
+}
