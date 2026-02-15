@@ -8,7 +8,7 @@ export default function Dine_Restaurant() {
 
   return (
     <section className="bg-white py-8 sm:py-10 lg:py-14">
-      <div className="w-[92%] sm:w-[90%] mx-auto px-2 sm:px-4">
+      <div className="w-[90%] sm:w-[90%] mx-auto px-2 sm:px-4">
         {/* Heading */}
         <h2 className="text-[22px] sm:text-[24px] lg:text-[26px] font-bold text-[#282c3f]">
           Discover best restaurants on Dineout
