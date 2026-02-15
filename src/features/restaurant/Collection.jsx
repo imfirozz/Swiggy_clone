@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import FilterSection from "./filters/FilterSection";
 import { Link } from "react-router";
+import swiggyData from "../../data/swiggyData.json";
 
 import { ShimmerCard } from "./filters/Top_Shimmer";
 
@@ -111,6 +112,68 @@ const COLLECTION_DESCRIPTIONS = {
   "pav bhaji": "Buttery, spicy Mumbai street food classic",
 };
 
+const isLocalhost = () => {
+  const host = window.location.hostname;
+  return host === "localhost" || host === "127.0.0.1";
+};
+
+const normalizeRestaurant = (restaurant) => {
+  const info = restaurant?.info || restaurant || {};
+  const avgRating = Number(info.avgRating) || 0;
+  const totalRatings = Number(String(info.totalRatings || "").replace(/\D/g, "")) || 0;
+
+  let costDisplay = info.costForTwoMessage;
+  if (!costDisplay && info.costForTwo) {
+    const cost = Number(info.costForTwo) / 100;
+    costDisplay = Number.isFinite(cost) ? `₹${Math.round(cost)} for two` : "";
+  }
+  if (!costDisplay) costDisplay = "₹400 for two";
+
+  return {
+    id: String(info.id || `${info.name || "restaurant"}-${Math.random()}`),
+    name: info.name || "Restaurant",
+    cuisines: info.cuisines || [],
+    imageId: info.cloudinaryImageId,
+    rating: avgRating,
+    totalRatings,
+    cost: costDisplay,
+    time: info.sla?.deliveryTime || 30,
+    area: info.areaName || info.locality || "",
+    locality: info.locality || "",
+    open: info.availability?.opened !== false,
+    discount: info.aggregatedDiscountInfoV3 || null,
+    promoted: Boolean(info.promoted),
+    veg: Boolean(info.veg),
+  };
+};
+
+const getStaticRestaurants = (dishType) => {
+  const cards = swiggyData?.data?.cards || [];
+  const section = cards[2]?.card?.card || cards[3]?.card?.card;
+  const list =
+    section?.gridElements?.infoWithStyle?.restaurants ||
+    section?.restaurants ||
+    [];
+
+  const normalized = list.map(normalizeRestaurant);
+  const uniqueRestaurants = normalized.filter(
+    (restaurant, index, self) =>
+      index === self.findIndex((r) => r.id === restaurant.id),
+  );
+
+  if (!dishType || !DISH_MAP[dishType]) {
+    return uniqueRestaurants;
+  }
+
+  const keywords = DISH_MAP[dishType].map((k) => k.toLowerCase());
+  const filtered = uniqueRestaurants.filter((restaurant) => {
+    const text = `${restaurant.name} ${restaurant.cuisines.join(" ")} ${restaurant.area}`.toLowerCase();
+    return keywords.some((keyword) => text.includes(keyword));
+  });
+
+  return filtered.length > 0 ? filtered : uniqueRestaurants;
+};
+
 export default function Collection() {
   const [collectionId, setCollectionId] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
@@ -143,12 +206,13 @@ export default function Collection() {
     if (match) {
       const id = match[1];
       setCollectionId(id);
+      const params = new URLSearchParams(window.location.search);
+      setCollectionTitle(params.get("title") || "");
 
       // Auto-detect dish type from collection ID
       if (COLLECTION_TO_DISH[id]) {
         setDishType(COLLECTION_TO_DISH[id]);
       } else {
-        const params = new URLSearchParams(window.location.search);
         setDishType(params.get("dish") || "");
       }
     }
@@ -172,15 +236,18 @@ export default function Collection() {
         setLoading(true);
         setError("");
 
+        if (!isLocalhost()) {
+          const staticRestaurants = getStaticRestaurants(dishType);
+          setRestaurants(staticRestaurants);
+          setTotalRestaurants(staticRestaurants.length);
+          setHasMore(false);
+          setLoading(false);
+          return;
+        }
+
         const apiUrl = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.2581049&lng=77.4795184&collection_id=${collectionId}&offset=${offset}&page_type=DESKTOP_WEB_LISTING&sortBy=RELEVANCE`;
 
-        const res = await fetch(apiUrl, {
-          headers: {
-            "User-Agent":
-              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            Referer: "https://www.swiggy.com/",
-          },
-        });
+        const res = await fetch(apiUrl);
 
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}: ${res.statusText}`);
@@ -240,41 +307,7 @@ export default function Collection() {
           return;
         }
 
-        //   costForTwo
-        const cleaned = list.map((r) => {
-          const info = r.info || r;
-
-          // cost display
-          let costDisplay = info.costForTwoMessage;
-          if (!costDisplay && info.costForTwo) {
-            const cost = info.costForTwo / 100;
-            if (isNaN(cost)) {
-              costDisplay = "₹400 for two";
-            } else {
-              costDisplay = `₹${Math.round(cost)} for two`;
-            }
-          }
-          if (!costDisplay) {
-            costDisplay = "₹400 for two";
-          }
-
-          return {
-            id: info.id || Math.random().toString(),
-            name: info.name || "Restaurant",
-            cuisines: info.cuisines || [],
-            imageId: info.cloudinaryImageId,
-            rating: info.avgRating || 0,
-            totalRatings: info.totalRatings || 0,
-            cost: costDisplay,
-            time: info.sla?.deliveryTime || 30,
-            area: info.areaName || info.locality || "",
-            locality: info.locality,
-            open: info.availability?.opened !== false,
-            discount: info.aggregatedDiscountInfoV3,
-            promoted: info.promoted,
-            veg: info.veg,
-          };
-        });
+        const cleaned = list.map(normalizeRestaurant);
 
         // Remove duplicates
         const uniqueRestaurants = cleaned.filter(
@@ -294,6 +327,17 @@ export default function Collection() {
         setLoading(false);
       } catch (e) {
         console.error("❌ Fetch error:", e);
+
+        const staticRestaurants = getStaticRestaurants(dishType);
+        if (offset === 0 && staticRestaurants.length > 0) {
+          setRestaurants(staticRestaurants);
+          setTotalRestaurants(staticRestaurants.length);
+          setHasMore(false);
+          setError("");
+          setLoading(false);
+          return;
+        }
+
         setError(`Failed to load restaurants: ${e.message}`);
         setLoading(false);
         setHasMore(false);
