@@ -543,10 +543,13 @@ export default function Restaurant_Location() {
 
                     const price = getPrice(dish);
                     const ratingData = getDishRating(dish);
+                    const dishId = dish.id || `${restaurantId}-${sIndex}-${iIndex}`;
+                    const itemCount =
+                      cartItems.find((i) => i.id === dishId)?.quantity || 0;
 
                     return (
                       <div
-                        key={dish.id || `${sIndex}-${iIndex}`}
+                        key={dishId}
                         className="flex flex-col sm:flex-row justify-between gap-4 border-b border-[#e9e9eb] py-6 last:border-b-0"
                       >
                         {/* LEFT */}
@@ -593,17 +596,54 @@ export default function Restaurant_Location() {
                             />
                           )}
 
-                          <button
-                            onClick={(e) => e.stopPropagation()}
-                            className="
-                        absolute -bottom-4
-                        bg-white text-[#60b246] font-bold
-                        px-6 sm:px-8 py-1 rounded-lg
-                        border shadow cursor-pointer
-                      "
-                          >
-                            ADD
-                          </button>
+                          {itemCount === 0 ? (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                dispatch(
+                                  addItems({
+                                    ...dish,
+                                    id: dishId,
+                                    restaurantId,
+                                  }),
+                                );
+                              }}
+                              className="
+                                absolute -bottom-4
+                                bg-white text-[#60b246] font-bold
+                                px-6 sm:px-8 py-1 rounded-lg
+                                border shadow cursor-pointer
+                              "
+                            >
+                              ADD
+                            </button>
+                          ) : (
+                            <div
+                              className="
+                                absolute -bottom-4
+                                bg-white text-[#60b246] flex gap-4 items-center
+                                px-3 sm:px-4 py-1 rounded-lg border shadow text-base sm:text-lg
+                              "
+                            >
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  dispatch(Decreament({ id: dishId }));
+                                }}
+                              >
+                                -
+                              </button>
+                              <span>{itemCount}</span>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  dispatch(Increament({ id: dishId }));
+                                }}
+                              >
+                                +
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </div>
                     );
